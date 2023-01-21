@@ -3,6 +3,10 @@
     "tailwindcss": "^3.2.4"
   },
   "scripts": {
-    "watch": "npx tailwindcss -i ./src/css/input.css -o ./assets/css/app.css --watch"
+    "watch": "npx tailwindcss -i ./src/css/input.css -o ./assets/css/app.css --watch",
+    "watch-js" : "npx esbuild assets/js/input.js --outfile=assets/js/app.js --bundle --watch"
+  },
+  "dependencies": {
+    "alpinejs": "^3.11.1"
   }
 }
