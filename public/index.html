@@ -18,11 +18,14 @@
   <!-- flowbit elment -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.2/flowbite.min.css" rel="stylesheet" />
 
+  <!-- odometer -->
+  <link rel="stylesheet" href="../assets/odometer/odometer.css" />
+
 </head>
 
 <body class="">
 
-  <div class="md:flex font-vazir hidden h-auto p-2  bg-black">
+  <div class="md:flex font-vazir hidden h-auto p-4  bg-black">
     <div class="container flex flex-wrap items-center justify-between mx-auto">
       <span class="text-white mr-2 font-bold text-center items-center">
         تیتر جدید ترین خبر : <span class="font-normal text-sm">شهردار لاهیجان از آمادگی ستاد عملیات زمستانی شهرداری خبر
@@ -34,9 +37,19 @@
 
   <nav
     class="sm:absolute font-vazir  z-40 w-full md:bg-black lg:bg-black sm:bg-black bg-gray-600 lg:bg-opacity-70 md:bg-opacity-70 sm:bg-opacity-70 border-gray-200 px-2 md:px-4 py-2.5">
-    <div class="w-full flex flex-wrap justify-between z-50  items-center ">
-      <img src="../assets/image/شهرداری-لاهیجان.png" alt="" class="h-14 ">
-      <div class="flex flex-row-reverse  md:order-2  flex-wrap ">
+    <div class="container flex flex-wrap items-center justify-between mx-auto">
+      <div class="flex items-center">
+        <img src="../assets/image/شهرداری-لاهیجان.png" alt="" class="h-14 whitespace-nowrap">
+      </div>
+      <div class="flex md:order-2">
+        <a href="#"
+          class="p-2.5 text-center items-center text-gray-100 hover:bg-gray-600 focus:outline-none focus:ring-4 focus:ring-gray-200 rounded-lg">
+          <svg class="text-white mt-1 w-5 h-5 text-center items-center" viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-telephone-forward">
+            <path class="text-center"
+              d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511zm10.762.135a.5.5 0 0 1 .708 0l2.5 2.5a.5.5 0 0 1 0 .708l-2.5 2.5a.5.5 0 0 1-.708-.708L14.293 4H9.5a.5.5 0 0 1 0-1h4.793l-1.647-1.646a.5.5 0 0 1 0-.708z" />
+          </svg>
+        </a>
         <button type="button" x-data="{id : 'searchModal'}" @click="$dispatch('open-search-modal',{id})"
           aria-controls="navbar-search" aria-expanded="false"
           class="text-gray-100 hover:bg-gray-600 focus:outline-none focus:ring-4 focus:ring-gray-200 rounded-lg text-sm p-2.5 mr-1">
@@ -48,18 +61,10 @@
           </svg>
           <span class="sr-only">Search</span>
         </button>
-        <a href="#"
-          class="p-2.5 text-center items-center text-gray-100 hover:bg-gray-600 focus:outline-none focus:ring-4 focus:ring-gray-200 rounded-lg">
-          <svg class="text-white mt-1 w-5 h-5 text-center items-center" viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-telephone-forward">
-            <path class="text-center"
-              d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511zm10.762.135a.5.5 0 0 1 .708 0l2.5 2.5a.5.5 0 0 1 0 .708l-2.5 2.5a.5.5 0 0 1-.708-.708L14.293 4H9.5a.5.5 0 0 1 0-1h4.793l-1.647-1.646a.5.5 0 0 1 0-.708z" />
-          </svg>
-        </a>
       </div>
 
 
-      <div class="flex items-center md:order-2">
+      <div class="flex items-center md:order-1">
         <button data-collapse-toggle="mega-menu" type="button"
           class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
           aria-controls="mega-menu" aria-expanded="false">
@@ -74,7 +79,7 @@
       </div>
 
       <div id="mega-menu"
-        class="hidden  items-center w-full text-sm md:text-xs lg:text-sm md:flex md:w-auto md:order-1">
+        class="hidden ml-12 items-center w-full text-sm md:text-xs lg:text-sm md:flex md:w-auto md:order-1">
         <ul class="flex flex-col mt-4 font-medium md:flex-row md:space-x-4 lg:space-x-6 md:mt-0">
           <li class="md:ml-4 ml-6">
             <button id="dropdownNavbarLink" data-dropdown-toggle="1-parentMenu"
@@ -125,6 +130,14 @@
           <li class="md:ml-4 ml-6">
             <a href="#"
               class="block font-bold whitespace-nowrap text-gray-100  border-gray-100 hover:bg-gray-500 md:hover:bg-transparent md:border-0 md:hover:text-green-400 p-1 md:p-0">خانه</a>
+          </li>
+          <li class="md:ml-4 ml-6">
+            <a href="#"
+              class="block font-bold whitespace-nowrap text-gray-100  border-gray-100 hover:bg-gray-500 md:hover:bg-transparent md:border-0 md:hover:text-green-400 p-1 md:p-0">پیوند ها</a>
+          </li>
+          <li class="md:ml-4 ml-6">
+            <a href="#"
+              class="block font-bold whitespace-nowrap text-gray-100  border-gray-100 hover:bg-gray-500 md:hover:bg-transparent md:border-0 md:hover:text-green-400 p-1 md:p-0">مالی</a>
           </li>
           <li class="md:ml-4 ml-6">
             <button id="dropdownNavbarLink" data-dropdown-toggle="4-parentMenu"
@@ -241,24 +254,40 @@
   </div>
   <!--end start sidebar -->
 
-  <div class="container ">
-    <div class="h-[110px] flex relative rounded-[40px] m-10 bg-gradient-to-r from-blue-300 to-blue-600">
-      <p class="text-white flex items-center text-center mr-9 text-3xl font-bold">شهرداری لاهیجان</p>
-      <div class="flex flex-row absolute rounded-l-3xl h-[85px] bg-white mt-3  left-5">
-        <div class="w-64 "></div>
-      </div>
-      <div class="flex flex-row absolute h-[85px] bg-white mt-3  left-[280px]">
-        <div class="w-56 "></div>
-      </div>
-      <div class="flex flex-row absolute h-[85px] bg-white mt-3  left-[508px]">
-        <div class="w-64 "></div>
-      </div>
-    </div>
+    
+<div class="m-10  text-center rounded-[40px] p-5 sm:p-3 bg-gradient-to-r from-[#58A4C4] to-[#307091]">
+  <div class="items-center justify-end space-y-4 sm:flex sm:space-y-0 sm:space-x-1">
+    <p class="text-white text-right flex items-center md:justify-start md:mt-0 py-3 justify-center md:ml-9  text-2xl font-bold">شهرداری لاهیجان</p>
+
+      <div  class="w-80 rounded-xl sm:rounded-l-none md:rounded-l-none sm:rounded-r-3xl  md:w-72 h-20  sm:w-auto bg-white  md:rounded-r-3xl  text-black  inline-flex items-center">
+        <p  class="ml-2 subs-odometrs mr-1 lg:text-6xl md:text-5xl sm:text-4xl text-3xl font-bold text-green-600" style="font-family: 'Times New Roman', Times, serif;">0</p>
+        <div class="text-right ">
+              <div class="mb-1 lg:text-sm text-[10px] text-sm font-bold text-gray-700">مساحت</div>
+              <div class="-mt-1 font-sans lg:text-sm text-[10px]  font-bold text-gray-700">شهر لاهیجان (کیلومتر مربع)</div>
+          </div>
+        </div>
+        <div  class="w-80 rounded-xl sm:rounded-none md:rounded-none  md:w-72 h-20 ml-1  sm:w-auto bg-white   text-black  inline-flex items-center">
+          <p class="ml-2 mr-2 lg:text-6xl md:text-5xl sm:text-4xl text-3xl font-bold text-green-600">۸۸</p>
+          <div class="text-right">
+            <div class="mb-1 lg:text-sm text-[10px] font-bold  text-gray-700">مساحت</div>
+            <div class="-mt-1 font-sans lg:text-sm text-[10px]  font-bold text-gray-700">شهر لاهیجان(هزار)</div>
+          </div>
+        </div>
+        <div  class="w-80 rounded-xl sm:rounded-r-none md:rounded-r-none sm:rounded-l-3xl md:w-72 h-20 ml-1 sm:w-auto bg-white rounded-l-3xl  text-black  inline-flex items-center ">
+          <p class="ml-2 mr-1 lg:text-6xl md:text-5xl sm:text-4xl text-3xl font-bold text-green-600">۱۱۳۰</p>
+        <div class="text-right ">
+              <div class="mb-1 lg:text-sm text-[10px] font-bold  text-gray-700">سفرهای روزانه</div>
+              <div class="-mt-1 font-sans lg:text-sm text-[10px]  font-bold text-gray-700">درون شهری (هزار سفر روزانه)</div>
+          </div>
+        </div>
+  </div>
+</div>
+
 
 
 
     <!-- bomm gardy -->
-    <div class="container ">
+    <div class="">
       <p class="flex justify-center relative mt-10 mb-10 font-bold text-2xl text-gray-700">مکان های گردشگری لاهیجان
         <span class="border-b border-4 border-green-600 absolute mt-10 flex w-24"></span>
 
@@ -586,7 +615,24 @@
     <!-- flowbit element -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.2/flowbite.min.js"></script>
 
+    <!-- odometer -->
+    <script src="../assets/odometer/odometer.js"></script>
+
+    <script>
+      const subsOdometr = document.querySelector(".subs-odometrs");
+
+      const odometer = new Odometer({
+        el: subsOdometr,
+        
+      })
+
+      subsOdometr.innerHTML = 114;
+    </script>
+
 
 </body>
 
 </html>
+
+
+
