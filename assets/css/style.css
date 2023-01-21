@@ -1,0 +1,10 @@
+body {
+  font-family: "iransans";
+}
+.odometer.odometer-auto-theme,
+.odometer.odometer-theme-default {
+  font-family: "iransans" !important;
+}
+.entext {
+  font-family: tahoma;
+}
