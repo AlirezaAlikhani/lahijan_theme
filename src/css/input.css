@@ -23,10 +23,11 @@
         background-color: #000601;
         opacity: 83%;
         z-index: -1;
-        border-radius: 48% 48% 0 0 / 100% 100% 0 0;
+        border-radius:  48% 48% 0 0 / 100% 100% 0 0;
         transform: scaleX(2);
     }
 }
+
 
 
 .dir-ltr {
