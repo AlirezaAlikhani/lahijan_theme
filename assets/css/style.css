@@ -1,5 +1,14 @@
 body {
   font-family: "iransans";
+
+}
+
+.shf {
+  background-image: url(../images/estakhr.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+    
 }
 .odometer.odometer-auto-theme,
 .odometer.odometer-theme-default {
@@ -10,55 +19,6 @@ body {
 }
 
 
-#search-modal {
-  top: 0;
-  margin-top: 3em !important;
-  .actions {
-    border: none;
-    .cancel.button {
-      background: #f0f0f0;
-      position: absolute;
-      top: -1.35em;
-      right: -0.50em;
-      bottom: auto;
-      left: auto;
-      a width: auto;
-      height: auto;
-      cursor: pointer;
-      text-align: center;
-      text-decoration: none;
-      z-index: 1;
-      div {
-        margin-top: 0.35em;
-      }
-    }
-  }
-  .header {
-    padding: 2.5rem 2.25rem 0 2.25rem !important;
-    border: none;
-    .container {
-      border-bottom: 1px solid rgba(34, 36, 38, .15);
-      padding-bottom: 0.5em;
-    }
-  }
-  .content {
-    .result .content {
-      background: #eee;
-      padding: 0.4em;
-      margin: 0.3em;
-      .description {
-        color: #333;
-      }
-    }
-  }
-}
 
 
 
-// Useless styles below
-body {
-  background-image: radial-gradient(farthest-corner, rgba(90, 153, 242, 0.4), rgba(60, 123, 212, 0.7));
-}
-.middle.grid {
-  height: 100%;
-}
